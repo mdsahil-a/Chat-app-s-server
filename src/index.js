@@ -30,7 +30,7 @@ app.use('/api/message',messageRoute);
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: "*", // allow all for testing; restrict in production
+    origin: "https://mdsahil-a.github.io/Flow-Chat", // allow all for testing; restrict in production
     methods: ["GET", "POST"],
   },
 });
@@ -93,6 +93,7 @@ httpServer.listen(portNum, () => {
   console.log(`Server is running at: http://localhost:${portNum}`);
   connectDB();
 });
+
 
 
 
